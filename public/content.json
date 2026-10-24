@@ -1,0 +1,223 @@
+{
+  "profile": {
+    "login": "lionsuperpromax",
+    "name": "Богдан",
+    "role": { "ru": "программист", "en": "programmer" },
+    "tagline": {
+      "ru": "Пишу на C++, Python и shell. Делаю инструменты, которые не должны \"просто работать\" — они должны работать даже когда всё сломалось.",
+      "en": "I write C++, Python and shell. I build tools that shouldn't merely \"work\" — they should work when everything else has already broken."
+    },
+    "bio": {
+      "ru": [
+        "Меня зовут Богдан. Работаю в основном на C++, Python и shell — от драйверов и системной диагностики Windows до автономных ИИ-агентов в терминале и системы на USB-флешке.",
+        "Люблю задачи, где нет документации: разобрать, как устроен процесс, подменить его, откатить чужие правки, зашифровать хранилище и спрятать за паролем.",
+        "Интерфейс тоже код: меню в терминале, ASCII-спиннер, запуск одной командой. Если установка занимает больше одной строки — это баг."
+      ],
+      "en": [
+        "My name is Bogdan. I mostly work in C++, Python and shell — from Windows drivers and system diagnostics to self-contained AI agents in the terminal and an operating environment that lives on a USB stick.",
+        "I like problems without documentation: inspect a process, swap it, roll back someone else's edits, encrypt storage and lock it behind a password.",
+        "The interface is code too: terminal menus, ASCII spinners, one-command installs. If setup takes more than one line, it's a bug."
+      ]
+    },
+    "stack": ["C++", "Python", "Bash", "Linux", "Windows API", "llama.cpp"],
+    "links": { "github": "https://github.com/lionsuperpromax" },
+    "facts": {
+      "ru": [
+        "9 публичных репозиториев",
+        "первый коммит — февраль 2025",
+        "лицензия MIT у stai",
+        "FlashOS 0.3.0 — 49959 строк bash-скрипта в одном файле"
+      ],
+      "en": [
+        "9 public repositories",
+        "first commit — February 2025",
+        "MIT license on stai",
+        "FlashOS 0.3.0 — a 49,959-line single bash file"
+      ]
+    }
+  },
+  "repos": [
+    {
+      "name": "stai",
+      "description": {
+        "ru": "Запускайте локальные нейросети как агенты, работающие на вашем ПК",
+        "en": "Run local neural networks as agents that work on your own PC"
+      },
+      "note": {
+        "ru": "Агент в терминале в стиле Claude Code: 10 инструментов, подтверждения, журнал отката правок. Вся программа — один файл на стандартной библиотеке Python 3.8+. Модели через llama.cpp, без облака и API-ключей.",
+        "en": "A Claude Code–style terminal agent: 10 tools, confirmation prompts, an undo journal. The whole program is one file on the Python 3.8+ standard library. Models via llama.cpp, no cloud, no API keys."
+      },
+      "command": "python local_agent.py",
+      "language": "Python",
+      "topics": ["ai", "agent", "llama.cpp", "cli"],
+      "url": "https://github.com/lionsuperpromax/stai",
+      "license": "MIT",
+      "pushed_at": "2026-10-17T08:30:38Z",
+      "created_at": "2026-10-17T08:03:32Z"
+    },
+    {
+      "name": "flashos",
+      "description": {
+        "ru": "Операционное окружение на USB-флешке с шифрованием",
+        "en": "An operating environment on a USB stick, with encryption"
+      },
+      "note": {
+        "ru": "Менеджер на стрелках: находит флешку, форматирует в exFAT, поднимает gocryptfs-хранилище с главным паролем, отдельные Vault-папки, бэкапы, диагностика и обновление из GitHub Releases.",
+        "en": "Arrow-key manager: detects the drive, formats exFAT, sets up a gocryptfs storage with a master password, separate vaults, backups, diagnostics and GitHub Releases updates."
+      },
+      "command": "bash flashos.sh",
+      "language": "Shell",
+      "topics": ["linux", "usb", "gocryptfs", "bash"],
+      "url": "https://github.com/lionsuperpromax/flashos",
+      "license": null,
+      "pushed_at": "2026-10-03T02:12:44Z",
+      "created_at": "2026-10-03T01:50:08Z"
+    },
+    {
+      "name": "OPstore-files",
+      "description": {
+        "ru": "Релизы приложений магазина OPstore",
+        "en": "App releases for the OPstore app store"
+      },
+      "note": {
+        "ru": "Место, куда пользователи магазина приложений складывают сборки: здесь в релизах выкладываются все приложения от пользователей OPstore.",
+        "en": "Where app-store users drop their builds: every user app of OPstore is published here in releases."
+      },
+      "command": null,
+      "language": null,
+      "topics": ["releases", "opstore"],
+      "url": "https://github.com/lionsuperpromax/OPstore-files",
+      "license": null,
+      "pushed_at": "2026-08-22T01:30:39Z",
+      "created_at": "2026-08-22T00:00:32Z"
+    },
+    {
+      "name": "3d-game",
+      "description": {
+        "ru": "Первая 3D-игра прямо в терминале",
+        "en": "My first 3D game, right in the terminal"
+      },
+      "note": {
+        "ru": "Первая 3D-игра — целиком в терминале, на C++, около 15 КБ исходника. Рендер без движка и без окна: символы вместо пикселей.",
+        "en": "My first 3D game — entirely in the terminal, in C++, a ~15 KB source file. Rendering with no engine and no window: characters instead of pixels."
+      },
+      "command": "g++ My-first3d-game.cpp -o game && ./game",
+      "language": "C++",
+      "topics": ["c++", "terminal", "3d"],
+      "url": "https://github.com/lionsuperpromax/3d-game",
+      "license": null,
+      "pushed_at": "2026-08-21T05:12:01Z",
+      "created_at": "2026-08-21T05:05:41Z"
+    },
+    {
+      "name": "DriverSecurity",
+      "description": {
+        "ru": "Сканирует драйверы и находит те, что могут навредить компьютеру",
+        "en": "Scans drivers and finds the ones that can harm your computer"
+      },
+      "note": {
+        "ru": "Перебирает все драйверы на устройстве и помечает те, что способны нанести вред компьютеру.",
+        "en": "Walks every driver on the machine and flags the ones that are able to harm it."
+      },
+      "command": null,
+      "language": "C++",
+      "topics": ["security", "drivers", "windows"],
+      "url": "https://github.com/lionsuperpromax/DriverSecurity",
+      "license": null,
+      "pushed_at": "2026-08-21T03:25:46Z",
+      "created_at": "2026-08-21T03:24:30Z"
+    },
+    {
+      "name": "GrandShield",
+      "description": {
+        "ru": "Поможет, если вас взломали или вы подозреваете вирус",
+        "en": "For when you've been hacked or suspect a virus"
+      },
+      "note": {
+        "ru": "Программа, которая помогает, если вас взломали или если вы подозреваете, что на компьютере вирус.",
+        "en": "A program that helps when you've been compromised or suspect a virus on your personal computer."
+      },
+      "command": null,
+      "language": "C++",
+      "topics": ["security", "windows"],
+      "url": "https://github.com/lionsuperpromax/GrandShield",
+      "license": null,
+      "pushed_at": "2026-08-20T07:33:50Z",
+      "created_at": "2026-08-20T07:31:13Z"
+    },
+    {
+      "name": "ProcessActivity",
+      "description": {
+        "ru": "Помогает следить за любыми процессами",
+        "en": "Helps you keep an eye on any process"
+      },
+      "note": {
+        "ru": "Наблюдение за любыми процессами: что запущено, что ест ресурсы, что появилось только что.",
+        "en": "Watching any process: what is running, what is eating resources, what just appeared."
+      },
+      "command": null,
+      "language": "C++",
+      "topics": ["processes", "monitoring", "windows"],
+      "url": "https://github.com/lionsuperpromax/ProcessActivity",
+      "license": null,
+      "pushed_at": "2026-08-20T08:01:31Z",
+      "created_at": "2026-08-20T07:59:35Z"
+    },
+    {
+      "name": "processadmin",
+      "description": {
+        "ru": "Управляйте процессами или подменяйте их в реальном времени",
+        "en": "Manage processes, or swap them out in real time"
+      },
+      "note": {
+        "ru": "Управление процессами и подмена их в реальном времени.",
+        "en": "Control processes, or replace them in real time."
+      },
+      "command": null,
+      "language": "C++",
+      "topics": ["processes", "windows", "cpp"],
+      "url": "https://github.com/lionsuperpromax/processadmin",
+      "license": null,
+      "pushed_at": "2026-08-20T07:21:08Z",
+      "created_at": "2026-08-20T07:08:48Z"
+    }
+  ],
+  "games": [
+    {
+      "id": "snake",
+      "title": "ProcessActivity",
+      "subtitle": {
+        "ru": "Следи за процессами. И за собой.",
+        "en": "Keep an eye on processes. And on yourself."
+      },
+      "hint": {
+        "ru": "Стрелки / WASD. Ешь процессы, не врезайся в свои же зомби.",
+        "en": "Arrows / WASD. Eat processes, don't hit your own zombies."
+      }
+    },
+    {
+      "id": "memory",
+      "title": "GrandShield: драйверы",
+      "subtitle": { "ru": "Найди пары до того, как систему перезагрузят.", "en": "Find the pairs before the system reboots." },
+      "hint": { "ru": "Открывай карты по две. Подозрительные драйверы — парами.", "en": "Flip two cards at a time. Suspicious drivers come in pairs." }
+    },
+    {
+      "id": "breakout",
+      "title": "FlashOS: форматирование",
+      "subtitle": { "ru": "Снеси сектора. Без потери данных.", "en": "Wipe the sectors. No data loss." },
+      "hint": { "ru": "Мышь или стрелки. Не теряй мяч.", "en": "Mouse or arrows. Don't drop the ball." }
+    },
+    {
+      "id": "quiz",
+      "title": "stai: экзамен",
+      "subtitle": { "ru": "Ты лучше локальной модели?", "en": "Are you better than a local model?" },
+      "hint": { "ru": "Пять вопросов про агента, терминал и <tool_call>.", "en": "Five questions about the agent, the terminal and <tool_call>." }
+    },
+    {
+      "id": "reaction",
+      "title": "GrandShield: вирус",
+      "subtitle": { "ru": "Поймай до того, как он закрепится.", "en": "Catch it before it persists." },
+      "hint": { "ru": "Кликай вирус. Не кликай системные процессы — это тебе в минус.", "en": "Click the virus. Don't click system processes — that costs you." }
+    }
+  ]
+}

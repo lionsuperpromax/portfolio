@@ -1,0 +1,27 @@
+<!--
+  Netlify hands the browser only /index.html (200) for unknown paths.
+  Static files keep 404 so a missing asset fails loudly instead of
+  returning HTML that the browser tries to parse as JS.
+-->
+[[redirects]]
+  from = "/api/github"
+  to = "/.netlify/functions/github"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
