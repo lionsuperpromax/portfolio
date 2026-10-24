@@ -1,8 +1,10 @@
-<!--
-  Netlify hands the browser only /index.html (200) for unknown paths.
-  Static files keep 404 so a missing asset fails loudly instead of
-  returning HTML that the browser tries to parse as JS.
--->
+# Build + publish settings (Netlify also reads netlify.toml for these)
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# The GitHub proxy lives at /api/github, backed by the Netlify function.
 [[redirects]]
   from = "/api/github"
   to = "/.netlify/functions/github"
